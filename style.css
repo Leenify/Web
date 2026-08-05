@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+html{
+    background-color:#F2F4FF;
+    margin: 50px 20%;
+}
+
+#encabezado{
+    text-align: center;
+    font-size: 33px;
+    color: #030A36;
+    font-family:'Spectral SC', cursive;
+}
+
+.segundo{
+    color: #1D373D;
+    font-weight: 900;   /* corregido */
+    font-family:'STIX Two Text', cursive;  /* entre comillas */
+}
+main{
+    color:#13183D;
+    font-family:'Cormorant Infant', cursive;
+    margin: 20px;
+    display: inline-block;
+}
+#caja{
+    padding: 50px 50px;
+}
+#misi{
+    width: 350px;
+}
+#csss{
+    width: 300px;
+}
+#cinema{
+    width: 350px;
+}
+#llora{
+    width: 355px;
+}
+#papou{
+    width: 250px;
+}
+#fnaf{
+    width: 450px;
+}
+.cosa{
+    font-size: 12px;
+} 

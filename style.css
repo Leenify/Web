@@ -1,48 +1,160 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-html{
-    background-color:#F2F4FF;
-    margin: 50px 20%;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-#encabezado{
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+header {
+    background-color: hsl(275, 42%, 45%);
+    color: white;
     text-align: center;
-    font-size: 33px;
-    color: #030A36;
-    font-family:'Spectral SC', cursive;
+    padding: 40px;
+    
+    animation: desvanecimiento 1.2s ease-out;
 }
 
-.segundo{
-    color: #1D373D;
-    font-weight: 900;   /* corregido */
-    font-family:'STIX Two Text', cursive;  /* entre comillas */
+header h1 {
+    margin: 0;
 }
-main{
-    color:#13183D;
-    font-family:'Cormorant Infant', cursive;
-    margin: 20px;
-    display: inline-block;
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
-#caja{
-    padding: 50px 50px;
+
+.banner {
+    background-color: white;
+    margin-bottom: 50px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(92, 89, 89, 0.12);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: center;
+
+    scroll-margin-top: 90px;
 }
-#misi{
-    width: 350px;
+
+section {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: center;
+
+    scroll-margin-top: 90px;
 }
-#csss{
-    width: 300px;
+
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    background-color: black;
 }
-#cinema{
-    width: 350px;
+
+section h2 {
+    animation: deslizamiento 1s ease-in-out;
 }
-#llora{
-    width: 355px;
+
+li {
+    margin: 10px;
 }
-#papou{
-    width: 250px;
+
+.consejo {
+    border-left: 5px solid #4b6cb7;
 }
-#fnaf{
-    width: 450px;
+
+.frase {
+    text-align: center;
+    background-color: #dce5ff;
+    
+    animation: desvanecimiento 1.5s ease-out;
 }
-.cosa{
-    font-size: 12px;
-} 
+
+p{
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+main > p {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.frase p {
+    font-size: 20px;
+    font-weight: bold;
+    align-content: center;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+
+#pre{
+    padding: 25px;
+    border-radius: 8px;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/*ANIMACIONES*/
+@keyframes desvanecimiento {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes deslizamiento {
+
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

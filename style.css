@@ -53,20 +53,13 @@ section {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-
     background-color: white;
-    padding: 25px;
     margin-bottom: 20px;
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    align-items: center;
 
     scroll-margin-top: 90px;
 }
 
-img{
+img {
     width: 100%;
     height: auto;
     display: block;
@@ -74,8 +67,38 @@ img{
     background-color: black;
 }
 
+section:has(img) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+section:has(img) h2 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+section:has(img) p,
+section:has(img) ul {
+    grid-column: 1;
+}
+
+section:has(img) img {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    width: 100%;
+}
+
 section h2 {
     animation: deslizamiento 1s ease-in-out;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
 }
 
 li {
@@ -86,6 +109,10 @@ li {
     border-left: 5px solid #4b6cb7;
 }
 
+section:not(:has(img)) {
+    text-align: center;
+}
+
 .frase {
     text-align: center;
     background-color: #dce5ff;
@@ -93,10 +120,11 @@ li {
     animation: desvanecimiento 1.5s ease-out;
 }
 
-p{
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
+.frase p {
+    font-size: 20px;
+    font-weight: bold;
+    align-content: center;
+    justify-content: center;
 }
 
 main > p {
@@ -109,11 +137,13 @@ main > p {
     text-align: center;
 }
 
-.frase p {
+#pre {
+    padding: 25px;
+    border-radius: 8px;
     font-size: 20px;
-    font-weight: bold;
-    align-content: center;
-    justify-content: center;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
 footer {
@@ -123,16 +153,7 @@ footer {
     padding: 15px;
 }
 
-#pre{
-    padding: 25px;
-    border-radius: 8px;
-    font-size: 20px;
-    line-height: 1.5;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-/*ANIMACIONES*/
+/* ANIMACIONES */
 @keyframes desvanecimiento {
 
     0% {
